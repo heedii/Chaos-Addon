@@ -1,6 +1,6 @@
 package com.chaos.addon;
 
-import com.chaos.addon.commands.CommandExample;
+import com.chaos.addon.commands.PingPong;
 import com.chaos.addon.hud.Watermark;
 import com.chaos.addon.modules.ModuleExample;
 import com.mojang.logging.LogUtils;
@@ -25,7 +25,7 @@ public class Addon extends MeteorAddon {
         Modules.get().add(new ModuleExample());
 
         // Commands
-        Commands.add(new CommandExample());
+        Commands.add(new PingPong());
 
         // HUD
         Hud.get().register(Watermark.INFO);

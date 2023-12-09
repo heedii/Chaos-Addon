@@ -6,15 +6,15 @@ import net.minecraft.command.CommandSource;
 
 import static com.mojang.brigadier.Command.SINGLE_SUCCESS;
 
-public class CommandExample extends Command {
-    public CommandExample() {
-        super("example", "Sends a message.");
+public class PingPong extends Command {
+    public PingPong() {
+        super("ping", "Sends a message.");
     }
 
     @Override
     public void build(LiteralArgumentBuilder<CommandSource> builder) {
         builder.executes(context -> {
-            info("hi");
+            info("pong!");
             return SINGLE_SUCCESS;
         });
     }
