@@ -1,7 +1,7 @@
 package com.chaos.addon;
 
 import com.chaos.addon.commands.CommandExample;
-import com.chaos.addon.hud.HudExample;
+import com.chaos.addon.hud.Watermark;
 import com.chaos.addon.modules.ModuleExample;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
@@ -28,7 +28,7 @@ public class Addon extends MeteorAddon {
         Commands.add(new CommandExample());
 
         // HUD
-        Hud.get().register(HudExample.INFO);
+        Hud.get().register(Watermark.INFO);
     }
 
     @Override

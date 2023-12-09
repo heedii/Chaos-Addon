@@ -6,17 +6,17 @@ import meteordevelopment.meteorclient.systems.hud.HudElementInfo;
 import meteordevelopment.meteorclient.systems.hud.HudRenderer;
 import meteordevelopment.meteorclient.utils.render.color.Color;
 
-public class HudExample extends HudElement {
-    public static final HudElementInfo<HudExample> INFO = new HudElementInfo<>(Addon.HUD_GROUP, "example", "HUD element example.", HudExample::new);
+public class Watermark extends HudElement {
+    public static final HudElementInfo<Watermark> INFO = new HudElementInfo<>(Addon.HUD_GROUP, "Watermark", "Watermark", Watermark::new);
 
-    public HudExample() {
+    public Watermark() {
         super(INFO);
     }
 
     @Override
     public void render(HudRenderer renderer) {
-        setSize(renderer.textWidth("Example element", true), renderer.textHeight(true));
+        setSize(renderer.textWidth("Chaos Addon", true), renderer.textHeight(true));
 
-        renderer.text("Example element", x, y, Color.WHITE, true);
+        renderer.text("Chaos Addon", x, y, Color.MAGENTA, true);
     }
 }
